@@ -1,0 +1,8 @@
+Fortune for Android
+-------------------
+
+A small Android app which resembles UNIX's fortune app and displays random
+fortune cookies. If you just run the app it will display the cookie with a
+button "Next fortune" which allows you to get another random fortune cookie.
+There is also a 4x1 widget for this app which display a random cookie and
+gets updated every 4 hours.

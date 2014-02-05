@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.sergeis.androidfortune"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="7" />
+
+    <application android:icon="@drawable/my_icon" android:label="@string/app_name" android:debuggable="true">
+        <activity android:name=".ShowFortune"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name=".FortuneWidget" android:label="@string/fortwidget_name">
+        	<intent-filter>
+        		<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+        	</intent-filter>
+        	<meta-data android:name="android.appwidget.provider" android:resource="@xml/fortwidget_provider"/>
+        </receiver>
+
+		<service android:name=".FortuneWidget$FortuneUpdateService" />
+		
+    </application>
+</manifest>
